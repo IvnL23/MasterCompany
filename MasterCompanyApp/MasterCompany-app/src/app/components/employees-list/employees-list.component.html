@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+        <div class="my-3"></div>
+   
+        <h1 class="head-title">List Of Employees</h1>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table table-striped table-hover table-responsive">
+          <ng-container matColumnDef="Name">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="LastName">
+            <th mat-header-cell *matHeaderCellDef>LastName</th>
+            <td mat-cell *matCellDef="let element">{{ element.lastName }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Document">
+            <th mat-header-cell *matHeaderCellDef>Document</th>
+            <td mat-cell *matCellDef="let element">{{ element.document }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Salary">
+            <th mat-header-cell *matHeaderCellDef>Salary</th>
+            <td mat-cell *matCellDef="let element">{{ element.salary }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Gender">
+            <th mat-header-cell *matHeaderCellDef>Gender</th>
+            <td mat-cell *matCellDef="let element">{{ element.gender }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="Position">
+            <th mat-header-cell *matHeaderCellDef>Position</th>
+            <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="StartDate">
+            <th mat-header-cell *matHeaderCellDef>StartDate</th>
+            <td mat-cell *matCellDef="let element">{{ element.startDate }}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[10, 15, 20, 50, 100, 250, 500, 1000]" showFirstLastButtons>
+        </mat-paginator>
+     
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MasterCompanyAPI</name>
+    </assembly>
+    <members>
+        <member name="M:MasterCompanyAPI.Controllers.EmployeeController.GetAllEmployees">
+            <summary>
+            Gets the list of all employees.
+            </summary>
+            <response code="200">Returns the list of all employees.</response>
+            <response code="500">Internal server error.</response>
+            <returns></returns>
+        </member>
+        <member name="M:MasterCompanyAPI.Controllers.EmployeeController.GetEmployeesBySalaryRange(System.Decimal,System.Decimal)">
+            <param name="minSalary">Minimum salary of the range.</param>
+            <param name="maxSalary">Maximum salary of the range.</param>
+            <summary>
+            Get employees by salary range.
+            </summary>
+            <response code="200">Returns the list of employees within the salary range.</response>
+            <response code="400">The maximum wage is less than the minimum salary.</response>
+            <response code="500">Internal server error.</response>
+            <returns></returns> 
+        </member>
+        <member name="M:MasterCompanyAPI.Controllers.EmployeeController.GetNonDuplicateEmployees">
+            <summary>
+            Gets the list of all employees without duplicates.
+            </summary>
+            <response code="200">Returns the list of all employees without duplicates.</response>
+            <response code="500">Internal server error.</response>
+            <returns></returns> 
+        </member>
+        <member name="M:MasterCompanyAPI.Controllers.EmployeeController.GetSalaryAdjustments">
+            <summary>
+            Shows adjusted salaries.
+            </summary>
+            <response code="200">Returns the list of all employees with adjusted salaries.</response>
+            <response code="500">Internal server error.</response>
+            <returns></returns> 
+        </member>
+        <member name="M:MasterCompanyAPI.Controllers.EmployeeController.GetGenderPercentages">
+            <summary>
+            Gets the gender percentages (male and female) of the employees.
+            </summary>
+            <response code="200">Returns the gender percentages (male and female) of the employees.</response>
+            <response code="500">Internal server error.</response>
+            <returns></returns> 
+        </member>
+        <member name="M:MasterCompanyAPI.Controllers.EmployeeController.AddEmployee(MasterCompanyAPI.Models.Employee)">
+            <summary>
+            Insert new Employee.
+            </summary>
+            <response code="200">Employee inserted.</response>
+            <response code="400">Employee already exist.</response>
+            <response code="500">Internal server error.</response>
+            <returns></returns> 
+        </member>
+        <member name="M:MasterCompanyAPI.Controllers.EmployeeController.RemoveEmployee(System.String)">
+            <param name="document">ID number(Cédula) of the employee.</param>
+            <summary>
+            Delete an employee by his ID number (Cédula).
+            </summary>
+            <response code="200">Employee deleted.</response>
+            <response code="404">The ID number doesn't match any of the records.</response>
+            <response code="500">Internal server error.</response>
+            <returns></returns> 
+        </member>
+    </members>
+</doc>
